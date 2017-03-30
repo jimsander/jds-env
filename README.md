@@ -1,4 +1,4 @@
-![Straight Outta CommdiddlyOmpton] (mytoon.jpg)
+![Straight Outta CommdiddlyOmpton] (https://github.com/jimsander/jds-env/blob/master/mytoon.jpg)
 # jds-env
 Common aliases and shell things that I use to setup my env.
 Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
@@ -34,4 +34,10 @@ Virtualbox
 vagrant
 virtualenv
 
-
+## Doc Tools 
+grip - python markdown preview
+```
+[jimsander@workHorse jds-env] # grip README.md
+ * Running on http://localhost:6419/ (Press CTRL+C to quit)
+ ```
+![grip-demo1] (https://github.com/jimsander/jds-env/grip-demo1.gif)
