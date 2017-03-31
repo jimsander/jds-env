@@ -3,7 +3,7 @@
 Common aliases and shell things that I use to setup my env.
 Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 
-# Tools Cheat 
+# Tools List / Cheat Sheet
 
 ## testing
 
@@ -33,8 +33,8 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 - vagrant
 - virtualenv
 
-## Doc Tools 
-- grip - python markdown preview
+## Doc 
+- grip - python github markdown preview
 
 ```bash
     [jimsander@workHorse jds-env] # grip README.md
@@ -43,7 +43,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 
 ![demo1] (./images/grip-demo1.gif)
 
-## json tools
+## Json 
 - [jq : json query/parse ](https://stedolan.github.io/jq/)
   Since using *gron*, might start using [jq.node](https://github.com/FGRibreau/jq.node)
 
