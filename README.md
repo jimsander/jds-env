@@ -23,17 +23,11 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 - Authy
 - Lastpass
 
-## Messaging
-- Signal - Encrypted messaging, includes `disappearing` messages
-- Slack - Great colalboration tool
+## Container
 
-## Virtualization
-- VMWare
-- Virtualbox 
-- vagrant
-- virtualenv
+- docker
+- [openvz](https://openvz.org/Main_Page)
 
-![demo1] (./images/grip-demo1.gif)
 ## Doc 
 - grip - python github markdown preview
 
@@ -71,6 +65,18 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 ```
 
 [foo](https://localhost)
+
+## Messaging
+- Signal - Encrypted messaging, includes `disappearing` messages
+- Slack - Great colalboration tool
+
+## Virtualization
+- VMWare
+- Virtualbox 
+- vagrant
+- virtualenv
+
+![demo1] (./images/grip-demo1.gif)
 
 
 
