@@ -37,6 +37,9 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 ```
 
 ![demo1] (./images/grip-demo1.gif)
+## Git 
+- [Somebody's Best Practices guide ](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI)
+- 
 
 ## Json 
 - [jq : json query/parse ](https://stedolan.github.io/jq/)
