@@ -10,6 +10,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 - [rerun ](https://github.com/rerun/rerun)
 - [TAP := Test Anything](https://testanything.org)
 - [BATS := ](https://github.com/sstephenson/bats.git)
+- [inspec :=](https://github.com/chef/inspec)
 
 ## API
 - flask
@@ -39,7 +40,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 ![demo1] (./images/grip-demo1.gif)
 ## Git 
 - [Somebody's Best Practices guide ](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI)
-- 
+- [PR/Issue Mangement](https://github.com/mary-poppins/mary-poppins)
 
 ## Json 
 - [jq : json query/parse ](https://stedolan.github.io/jq/)
