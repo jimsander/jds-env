@@ -6,7 +6,6 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 # Tools List / Cheat Sheet
 
 ## testing
-
 - [rerun ](https://github.com/rerun/rerun)
 - [TAP := Test Anything](https://testanything.org)
 - [BATS := ](https://github.com/sstephenson/bats.git)
@@ -73,6 +72,10 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 ## Messaging
 - Signal - Encrypted messaging, includes `disappearing` messages
 - Slack - Great colalboration tool
+
+## Orchestration
+[Overiew](http://slides.com/maciejsawicki/projektowanie-i-wdrazanie-aplikacji-w-chmurze-2-3#/13)
+
 
 ## Virtualization
 - VMWare
