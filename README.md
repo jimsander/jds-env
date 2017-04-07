@@ -1,4 +1,4 @@
-![Straight Outta CommdiddlyOmpton] (https://github.com/jimsander/jds-env/images/mytoon.jpg)
+![Straight Outta CommdiddlyOmpton] (images/mytoon.jpg?raw=true)
 # jds-env
 Common aliases and shell things that I use to setup my env.
 Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
@@ -30,13 +30,14 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 
 ## Doc 
 - grip - python github markdown preview
+  - Cool! auto-refreshes as source is updated
 
 ```bash
     [jimsander@workHorse jds-env] # grip README.md
        * Running on http://localhost:6419/ (Press CTRL+C to quit)
 ```
 
-![demo1] (./images/grip-demo1.gif)
+![demo1] (images/grip-demo1.gif?raw=true)
 ## Git 
 - [Somebody's Best Practices guide ](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI)
 - [PR/Issue Mangement](https://github.com/mary-poppins/mary-poppins)
@@ -47,7 +48,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 
 ```bash
     # curl -s https://api.userinfo.io/userinfos?ip_address=`curl -s ` | jq '@text "Not My Address folks \(.ip_address)"'
-    "Not My Address folks 162.251.10.14"
+    "Not My Address folks 162.250.11.13"
 ```
 
 - [gron : flatten json pathing, good for grep: `pip install gron`](https://github.com/FGRibreau/gron)
