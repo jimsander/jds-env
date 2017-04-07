@@ -1,4 +1,4 @@
-![Straight Outta CommdiddlyOmpton] (images/mytoon.jpg?raw=true)
+![Straight Outta CommdiddlyOmpton] (./images/mytoon.jpg?raw=true)
 # jds-env
 Common aliases and shell things that I use to setup my env.
 Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
@@ -37,7 +37,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
        * Running on http://localhost:6419/ (Press CTRL+C to quit)
 ```
 
-![demo1] (images/grip-demo1.gif?raw=true)
+![demo1] (./images/grip-demo1.gif?raw=true)
 ## Git 
 - [Somebody's Best Practices guide ](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI)
 - [PR/Issue Mangement](https://github.com/mary-poppins/mary-poppins)
