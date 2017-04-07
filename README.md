@@ -1,5 +1,4 @@
-![Straight Outta CommdiddlyOmpton](https://github.com/jimsander/jds-env/images/mytoon.jpg)
-![Two](https://github.com/jimsander/jds-env/blob/master/images/mytoon.jpg)
+![Straight Outta CommdiddlyOmpton](https://github.com/jimsander/jds-env/blob/master/images/mytoon.jpg)
 # jds-env
 Common aliases and shell things that I use to setup my env.
 Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
@@ -38,7 +37,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
        * Running on http://localhost:6419/ (Press CTRL+C to quit)
 ```
 
-![demo1](https://github.com/jimsander/jds-env/images/grip-demo1.gif)
+![demo1](https://github.com/jimsander/jds-env/blob/master/images/grip-demo1.gif)
 ## Git 
 - [Somebody's Best Practices guide ](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI)
 - [PR/Issue Mangement](https://github.com/mary-poppins/mary-poppins)
