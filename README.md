@@ -1,4 +1,7 @@
 ![Straight Outta CommdiddlyOmpton](https://github.com/jimsander/jds-env/blob/master/images/mytoon.jpg)
+
+[Puddles](https://open.spotify.com/embed/user/postmodernjukebox/playlist/7csrlizJurpn6y0xenTwzuo)
+
 # jds-env
 Common aliases and shell things that I use to setup my env.
 Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
@@ -10,6 +13,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 - [TAP := Test Anything](https://testanything.org)
 - [BATS := ](https://github.com/sstephenson/bats.git)
 - [inspec :=](https://github.com/chef/inspec)
+- [Flashback Browser Replay](https://opensource.com/article/17/4/flashback-internet-mocking-tool)
 
 ## API
 - flask
@@ -41,6 +45,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 ## Git 
 - [Somebody's Best Practices guide ](https://docs.google.com/document/d/1h8nijFSaa1jG_UE8v4WP7glh5qOUXnYtAtJh_gwOQHI)
 - [PR/Issue Mangement](https://github.com/mary-poppins/mary-poppins)
+- [Release Management](http://nvie.com/posts/a-successful-git-branching-model/)
 
 ## Json 
 - [jq : json query/parse ](https://stedolan.github.io/jq/)
@@ -68,7 +73,7 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
       json.city.name = "Potwin";
 ```
 
-[foo](https://localhost)
+- jq.node
 
 ## Messaging
 - Signal - Encrypted messaging, includes `disappearing` messages
@@ -83,8 +88,5 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 - Virtualbox 
 - vagrant
 - virtualenv
-
-![demo1] (./images/grip-demo1.gif)
-
 
 
