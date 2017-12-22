@@ -1,14 +1,22 @@
 # One Liners and quick Cheats
 
-Not all of them are gems
-Most is in bash
+## heads up
+- Not all of them are gems
+- Most is in bash
+  - I prefer single ticks over the $() exec syntax 
+
+```bash
+echo "`expr 9 % 6` == $(expr 9 % 6)"
+# 3 == 3
+```
+
 
 ## JMESpath Queries
 
 Useful for filtering on AWS and Azure CLI
 
 ```bash
-az vm list --query "[?contains(displayName,'SOME_STRING')].appId"`; do az ad app delete --id $id; done
+az vm list --query "[?contains(displayName,'SOME_STRING')].name"
 ```
 
 ```bash
