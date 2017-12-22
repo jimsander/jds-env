@@ -1,7 +1,5 @@
 ![Straight Outta CommdiddlyOmpton](https://github.com/jimsander/jds-env/blob/master/images/mytoon.jpg)
 
-[Puddles](https://open.spotify.com/embed/user/postmodernjukebox/playlist/7csrlizJurpn6y0xenTwzuo)
-
 # jds-env
 Common aliases and shell things that I use to setup my env.
 Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
@@ -88,5 +86,4 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 - Virtualbox 
 - vagrant
 - virtualenv
-
 
