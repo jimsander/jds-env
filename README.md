@@ -80,6 +80,10 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 ## Orchestration
 [Overiew](http://slides.com/maciejsawicki/projektowanie-i-wdrazanie-aplikacji-w-chmurze-2-3#/13)
 
+## **PRIVACY** 
+
+If you think privacy is unimportant for you because you have nothing to hide, you might as well say free speech is unimportant for you because you have nothing useful to say. -- 2015, anonymous?
+
 
 ## Virtualization
 - VMWare
