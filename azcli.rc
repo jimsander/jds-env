@@ -1,0 +1,14 @@
+## Azure
+AZA_TTY="/tmp/`basename $(tty)`"
+AZ_REFRESH=60 # seconds
+alias aza='az account list --query "[? isDefault ].name" -o tsv | tee $AZA_TTY'
+
+function elapsed_aza {
+        expr `date "+%s"` - `stat -f "%m" $AZA_TTY || echo 0`
+}
+
+alias azad='a=$(elapsed_aza) && [ $a -gt $AZ_REFRESH ] && printf "fresh " && aza || echo cache $(cat $AZA_TTY)'```
+
+##put `azad` in your PS1 somewhere
+
+export PS1='($(azad)) [\u@h \W] # 
