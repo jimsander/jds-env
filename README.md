@@ -1,11 +1,16 @@
-![Straight Outta CommdiddlyOmpton](https://github.com/jimsander/jds-env/blob/master/images/mytoon.jpg)
+<img src="https://github.com/jimsander/jds-env/blob/master/images/mytoon.jpg" height='150px' weight='150px'>
 
 # jds-env
-Common aliases and shell things that I use to setup my env.
-Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
+(07.08.22) - 
+> 5 years gone by 
+(02.15.17) - 
+> Common aliases and shell things that I use to setup my env.
+> Honestly, I've not touched this in 2 years... time to refresh 
 
 # Tools List / Cheat Sheet
 
+## Security
+- pwgen - pw generation : interactive(tty) and script(non-tty)
 ## testing
 - [rerun ](https://github.com/rerun/rerun)
 - [TAP := Test Anything](https://testanything.org)
@@ -13,27 +18,30 @@ Honestly, I've not touched this in 2 years... time to refresh (02.15.17)
 - [inspec :=](https://github.com/chef/inspec)
 - [Flashback Browser Replay](https://opensource.com/article/17/4/flashback-internet-mocking-tool)
 
-## API
-- flask
+## API Development
 - chalice
-- swagger
-
+- flask
 - python
+- swagger
 - virtualenv
 
 ## Apps
+Used Daily for security and 
 - Authy
 - Lastpass
 
 ## Container
 
 - docker
+- kubernetes (don't laugh, this page hadn't been updated since 2017 when this was added)
 - [openvz](https://openvz.org/Main_Page)
 
 ## Doc 
-- grip - python github markdown preview
-  - Cool! auto-refreshes as source is updated
+- grip - python github markdown preview @ http://localhost:6419
+  - PRO: Cool! auto-refreshes as source is updated
+  - CON: Uses Github API Rate limiting, have to be sparse on refreshing the browser
 
+Sample: 
 ```bash
     [jimsander@workHorse jds-env] # grip README.md
        * Running on http://localhost:6419/ (Press CTRL+C to quit)
