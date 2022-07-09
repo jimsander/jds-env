@@ -1,0 +1,12 @@
+source <(kubectl completion bash)
+alias k=kubectl
+complete -o default -F __start_kubectl k
+export dry="--dry-run=client -o yaml"
+
+alias kns="k config set-context --current --namespace "
+alias kgns="k config view --minify -o jsonpath='{..namespace}'; echo"
+alias kcd="k create $dry"
+alias kcr="k create "
+alias kgp="k get po"
+alias kgn="k get nodes"
+alias kgall="k get nodes,po,svc,ep -o wide"
