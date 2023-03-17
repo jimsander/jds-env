@@ -1,0 +1,336 @@
+### appsettings.json
+{
+// --- hosting ---
+"urls": "http://+:5000",
+
+"AutoProvisioning": "true",
+
+"SystemAuthorisationGroups": "3120a4ee-6875-4d7b-b268-acd706d65e09",
+
+"AuditStreamName": "IDENTITY_AUTH_STREAM",
+
+// Signing Certificate Configuration Example
+/*
+"SigningCertificate": {
+  "Type": "SelfSigned"
+},
+*/
+/*"SigningCertificate": {
+  "Type": "Vault",
+  "SecretKey": "signingCertificate"
+},*/
+
+/*"SigningCertificate": {
+  "Type": "Content",
+  "CertificateContent":"<base 64 encoded certificate>",
+  "CertificatePassword": "<certificate password>"
+},*/
+
+"SigningCertificate": {
+  "Type": "FilePath",
+  "CertificatePath": "/etc/tls/keystore.p12",
+  "CertificatePassword":  "<certificate password>" 
+},
+
+"SecretManagement": {
+  "Type": "appSettings",
+  "Database": {
+    "kv": {
+      "certificate": "",
+      "password": ""
+    }
+  },
+  "Subject": "kv",
+  "VaultServer": "localhost",
+  "VaultPort": 8200,
+  "VaultScheme": "http",
+  "VaultAuthType": "kubernetes",
+  "VaultAuth": {
+    "Token": "root",
+    "Role": "limited-access-role"
+  }
+},
+
+"Auth": {
+  "IssuerUri": "%IssuerUri%",
+  "Providers": [
+    {
+      "GlobalId": "eb08cdfa-c403-11ed-bbac-3296c39ef10b",
+      "TenantId": "dcedc429-11a9-4408-84a7-c781363c62e1",
+      "DisplayName": "AAD : OIDC Auth Grant Flow",
+      "ProviderType": "OpenIdConnect",
+      "Options": {
+        "Authority": "https://login.microsoftonline.com/",
+        "ApplicationId": "5dbb1073-8321-4c8f-b3f9-89aff598ae97",
+        "ApplicationSecret": "r9S8Q~6GQNYu5f_k1c8DyahqcOv6ZtaoqrzKAc2q",
+        "ResponseType": "code",
+        "DirectoryId": "dcedc429-11a9-4408-84a7-c781363c62e1",
+        "Issuer": "https://sts.windows.net/dcedc429-11a9-4408-84a7-c781363c62e1/",
+        "DiscoveryEndpoint": "https://login.microsoftonline.com/dcedc429-11a9-4408-84a7-c781363c62e1/v2.0/.well-known/openid-configuration"
+      }
+    },
+    {
+      "GlobalId": "ceab65a5-a83a-4e49-a96a-df66ba943fb0",
+      "TenantId": "dcedc429-11a9-4408-84a7-c781363c62e1",
+      "DisplayName": "Azure Active Directory (aad): Deprecated OIDC Implict Flow",
+      "ProviderType": "OpenIdConnect",
+      "Options": {
+        "Authority": "https://login.microsoftonline.com/",
+        "ApplicationId": "d8350a6b-00ce-41a0-9dfd-aaf208b180c0",
+        "ResponseType": "id_token",
+        "DirectoryId": "dcedc429-11a9-4408-84a7-c781363c62e1",
+        "Issuer": "https://sts.windows.net/dcedc429-11a9-4408-84a7-c781363c62e1/",
+        "DiscoveryEndpoint": "https://login.microsoftonline.com/dcedc429-11a9-4408-84a7-c781363c62e1/v2.0/.well-known/openid-configuration"
+      }
+    },
+    {
+      "GlobalId": "020e0c57-ce1b-45e8-87a7-22ecdcdb2870",
+      "TenantId": "39e3964e-f872-4e49-a5c5-8c93c903a64f",
+      "DisplayName": "Azure Active Directory test (aad-test)",
+      "ProviderType": "OpenIdConnect",
+      "Options": {
+        "Authority": "https://login.microsoftonline.com/",
+        "ApplicationId": "5dbb1073-8321-4c8f-b3f9-89aff598ae97",
+        "DirectoryId": "dcedc429-11a9-4408-84a7-c781363c62e1",
+        "Issuer": "https://sts.windows.net/dcedc429-11a9-4408-84a7-c781363c62e1/",
+        "DiscoveryEndpoint": "https://login.microsoftonline.com/dcedc429-11a9-4408-84a7-c781363c62e1/v2.0/.well-known/openid-configuration"
+      }
+    },
+
+    {
+      "GlobalId": "020e0c57-ce1b-45e8-87a7-22ecdcdb2860",
+      "TenantId": "222bc650-2c05-4459-9f53-1413785f35b5",
+      "DisplayName": "Azure Ad connect - RedBoxTesting Ad (redboxTesting)",
+      "ProviderType": "OpenIdConnect",
+      "Options": {
+        "Authority": "https://login.microsoftonline.com/",
+        "ApplicationId": "b7f7e54f-a942-472e-a854-72f9ac0526a3",
+        "DirectoryId": "222bc650-2c05-4459-9f53-1413785f35b5",
+        "Issuer": "https://sts.windows.net/222bc650-2c05-4459-9f53-1413785f35b5/",
+        "DiscoveryEndpoint": "https://login.microsoftonline.com/222bc650-2c05-4459-9f53-1413785f35b5/v2.0/.well-known/openid-configuration"
+      }
+    },
+
+    {
+      "GlobalId": "6c4e88f6-ac6e-4a0e-93b6-d6219593c70c",
+      "TenantId": "dcedc429-11a9-4408-84a7-c781363c62e1",
+      "DisplayName": "Ws Federation (WsFed)",
+      "ProviderType": "WsFederation",
+      "Options": {
+        "Wtrealm": "urn:identityServer",
+        "MetadataAddress": "https://adfs.redboxdev.com/federationmetadata/2007-06/federationmetadata.xml"
+      }
+    }
+  ]
+},
+
+"IdentityServices_IdentityStoringService": {
+  "eventStore": {
+    "host": "%EVENTSTORE_HOST%",
+    "port": "%EVENTSTORE_PORT%",
+    "username": "%EVENTSTORE_USERNAME%",
+    "password": "%EVENTSTORE_PASSWORD%"
+  },
+  "eventStoreSubscription": {
+    "stream": "$ce-IDENTITY_ADMIN_STREAM",
+    "subscriptionName": "identity-storing-service-identity-server",
+    "bufferSize": 10,
+    "messageTimeoutMilliseconds": 60000,
+    "connectToSubscriptionMaxRetryAttempts": 1000,
+    "connectionPauseBetweenFailuresMilliseconds": 1000,
+    "connectionStopTimeoutMilliseconds": 500
+  },
+  "sqliteConnectionString": "Data Source=IdentityStorage.sqlite",
+  "skipAppendingActionResult": true
+},
+
+"EventStoreService": {
+  "eventStore": {
+    "host": "%EVENTSTORE_HOST%",
+    "port": "%EVENTSTORE_PORT%",
+    "username": "%EVENTSTORE_USERNAME%",
+    "password": "%EVENTSTORE_PASSWORD%",
+    "basePath": "/identity",
+    "connectToEventStoreMaxReconnectionAttempts": 1000,
+    "connectToEventStoreMaxOperationRetryAttempts": 100,
+    "connectionPauseInMilliseconds": 1000,
+    "longLastingConnection": true,
+    "verboseLogger": false,
+    "heartbeatTimeoutMilliseconds": 2500,
+    "heartbeatIntervalMilliseconds": 1200
+  },
+  "streamName": "$ce-IDENTITY_ADMIN_STREAM",
+  "connectionStopTimeoutMilliseconds": "2500"
+},
+
+"Resources": [
+  {
+    "ResourceId": "replay_app_api",
+    "ResourceName": "Search and Replay App API"
+  },
+  {
+    "ResourceId": "media_api",
+    "ResourceName": "Media API"
+  },
+  {
+    "ResourceId": "metadata_api",
+    "ResourceName": "Metadata API"
+  },
+  {
+    "ResourceId": "auth_api_gateway",
+    "ResourceName": "API Gateway"
+  }
+],
+
+"Clients": [
+  {
+    "ClientId": "replay_app_ui",
+    "ClientName": "Search and Replay App UI",
+    "AllowedGrantTypes": [ "implicit" ],
+    "AllowAccessTokensViaBrowser": true,
+    "RedirectUris": [ "http://localhost:4200/auth/callback" ],
+    "PostLogoutRedirectUris": [ "http://localhost:4200/account/logged-out/" ],
+    "AllowedCorsOrigins": [ "http://localhost:4200" ],
+    "AlwaysIncludeUserClaimsInIdToken": true,
+    "AllowedScopes": [ "openid", "profile", "auth_api_gateway" ]
+  },
+  {
+    "ClientId": "swagger_app_ui",
+    "ClientName": "Swagger Demo",
+    "AllowedGrantTypes": [ "implicit" ],
+    "AllowAccessTokensViaBrowser": true,
+    "RedirectUris": [ "http://localhost:4444/swagger/oauth2-redirect.html" ],
+    "PostLogoutRedirectUris": [ "http://localhost:4444/swagger" ],
+    "AllowedCorsOrigins": [ "http://localhost:4444" ],
+    "AlwaysIncludeUserClaimsInIdToken": true,
+    "AllowedScopes": [ "openid", "profile", "auth_api_gateway" ]
+  },
+  {
+    "ClientId": "api.client",
+    "ClientName": "API Client - All APIs",
+    "ClientSecrets": [ "c423jn9hy09vn40vn2049yhyq" ],
+    "AllowedGrantTypes": [ "apiclient" ],
+    "AllowAccessTokensViaBrowser": true,
+    "AlwaysIncludeUserClaimsInIdToken": true,
+    "AllowedScopes": [ "openid", "profile", "auth_api_gateway" ]
+  },
+  {
+    "ClientId": "credentials_grant",
+    "ClientName": "Client Credentials Grant",
+    "ClientSecrets": [ "Q2xpZW50IENyZWRlbnRpYWxzIEdyYW50" ],
+    "AllowedGrantTypes": [ "code", "implicit", "client_credentials" ],
+    "AllowAccessTokensViaBrowser": false,
+    "Claims": [
+      {
+        "type": "Role",
+        "value": "f863600a-942f-48bd-a039-4025938e29fe"
+      },
+      {
+        "type": "Role",
+        "value": "38195588-1c6a-4ac5-a0b8-7e193a672610"
+      },
+      {
+        "type": "TenantId",
+        "value": "dcedc429-11a9-4408-84a7-c781363c62e1"
+      },
+      {
+        "type": "GlobalId",
+        "value": "ef660026-60d5-4006-9c48-0969e0a2ccb3"
+      },
+      {
+        "type": "LogoUrl",
+        "value": "LogoUrl"
+      }
+    ],
+    "AllowedScopes": [ "openid", "profile", "auth_api_gateway", "offline_access" ]
+  },
+  {
+    "ClientId": "credentials_grant_mt",
+    "ClientName": "Client Credentials Grant For Multi Tenancy",
+    "ClientSecrets": [ "Q2xpZW50IENyZWRlbnRpYWxzIEdyYW50IEZvciBNdWx0aSBUZW5hbmN5" ],
+    "AllowedGrantTypes": [ "code", "implicit", "client_credentials" ],
+    "AllowAccessTokensViaBrowser": false,
+    "Claims": [
+      {
+        "type": "Role",
+        "value": "89c3067a-cc05-410c-990a-98ec21ff489a"
+      },
+      {
+        "type": "TenantId",
+        "value": "818787ec-c39e-4bd6-980c-eb8d4cf34e0c"
+      },
+      {
+        "type": "GlobalId",
+        "value": "1813c5e6-e74e-4c1d-8392-4dee20f7821f"
+      },
+      {
+        "type": "LogoUrl",
+        "value": "LogoUrl"
+      }
+    ],
+    "AllowedScopes": [ "openid", "profile", "auth_api_gateway", "offline_access" ]
+  },
+  {
+    "ClientId": "workstation_client",
+    "ClientName": "WSC App",
+    "AllowedGrantTypes": [ "implicit" ],
+    "AllowAccessTokensViaBrowser": true,
+    "RedirectUris": [ "http://localhost:35555/wsc/auth/login", "http://127.0.0.1:35555/wsc/auth/login", "http://localhost:45555/wsc/auth/login", "http://127.0.0.1:45555/wsc/auth/login", "http://localhost:55555/wsc/auth/login", "http://127.0.0.1:55555/wsc/auth/login" ],
+    "PostLogoutRedirectUris": [ "http://localhost:35555/wsc/auth/logout", "http://127.0.0.1:35555/wsc/auth/logout", "http://localhost:45555/wsc/auth/logout", "http://127.0.0.1:45555/wsc/auth/logout", "http://localhost:55555/wsc/auth/logout", "http://127.0.0.1:55555/wsc/auth/logout" ],
+    "AllowedCorsOrigins": [ "http://localhost:35555", "http://127.0.0.1:35555", "http://localhost:45555", "http://127.0.0.1:45555", "http://localhost:55555", "http://127.0.0.1:55555" ],
+    "AlwaysIncludeUserClaimsInIdToken": true,
+    "AllowedScopes": [ "openid", "profile", "auth_api_gateway" ],
+    "IdentityTokenLifetime": 36000, // 10h
+    "AccessTokenLifetime": 36000 // 10h
+  }
+],
+
+"SnapshotSettings": {
+  "IdentitySnapshotSettings": {
+    "SnapshotStream": "IDENTITY_SNAPSHOT",
+    "SnapshotEventType": "identity_snapshot",
+    "SnapshotMetadataStream": "IDENTITY_SNAPSHOT_METADATA",
+    "SnapshotMetadataEventType": "identity_snapshot_created",
+    "SizeOfSlice": 500,
+    "SnapshotInitiationEventNumber": 100
+  },
+  "ConfigurationSnapshotSettings": {
+    "SnapshotStream": "CONFIGURATION_SNAPSHOT",
+    "SnapshotEventType": "configuration_snapshot",
+    "SnapshotMetadataStream": "CONFIGURATION_SNAPSHOT_METADATA",
+    "SnapshotMetadataEventType": "configuration_snapshot_created",
+    "SizeOfSlice": 500,
+    "SnapshotInitiationEventNumber": 100
+  }
+},
+
+"Serilog": {
+  "Using": [ "Serilog.Sinks.File" ],
+  "MinimumLevel": {
+    "Default": "Debug"
+  },
+  "WriteTo:Sublogger": {
+    "Name": "Logger",
+    "Args": {
+      "configureLogger": {
+        "WriteTo": [
+          {
+            "Name": "Console",
+            "Args": {
+              "outputTemplate": "{Timestamp:o} [{Level:u3}] [{Application}] {Message}{NewLine}{Exception}",
+              "theme": "Serilog.Sinks.SystemConsole.Themes.SystemConsoleTheme::Grayscale, Serilog.Sinks.Console"
+            }
+          }
+        ]
+      },
+      "restrictedToMinimumLevel": "Debug"
+    }
+  },
+  "Enrich": [ "FromLogContext", "WithMachineName", "WithThreadId" ],
+  "Properties": {
+    "Application": "IdentityServer"
+  }
+}
+}
+
+
